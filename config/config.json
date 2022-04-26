@@ -1,22 +1,27 @@
 {
   "Cerber": {
     "Dynamic": "/home/jevenari/Desktop/Masterarbeit/Forensische Analyse/Forensic_Results/Cerber/Dynamic",
-    "ProcessMonitor":  "procmon_cerber.csv"
+    "ProcessMonitor":  "procmon_cerber.csv",
+    "Regshot": "regshot_cerber.csv"
   },
   "Darkside": {
     "Dynamic": "/home/jevenari/Desktop/Masterarbeit/Forensische Analyse/Forensic_Results/Darkside/Dynamic",
-    "ProcessMonitor":  "procmon_darkside.csv"
+    "ProcessMonitor":  "procmon_darkside.csv",
+    "Regshot": "regshot_darkside.csv"
   },
   "GandCrabV4": {
     "Dynamic": "/home/jevenari/Desktop/Masterarbeit/Forensische Analyse/Forensic_Results/GandCrabV4/Dynamic",
-    "ProcessMonitor":  "procmon_gandcrab_V4.csv"
+    "ProcessMonitor":  "procmon_gandcrab_v4.csv",
+    "Regshot": "regshot_gandcrab_v4.csv"
   },
   "Ryuk": {
     "Dynamic": "/home/jevenari/Desktop/Masterarbeit/Forensische Analyse/Forensic_Results/Ryuk/Dynamic",
-    "ProcessMonitor":  "procmon_ryuk.csv"
+    "ProcessMonitor":  "procmon_ryuk.csv",
+    "Regshot": "regshot_ryuk.csv"
   },
   "Sodinokibi": {
     "Dynamic": "/home/jevenari/Desktop/Masterarbeit/Forensische Analyse/Forensic_Results/Sodinokibi/Dynamic",
-    "ProcessMonitor":  "procmon_sodinokibi.csv"
+    "ProcessMonitor":  "procmon_sodinokibi.csv",
+    "Regshot": "regshot_sodinokibi.csv"
   }
 }
