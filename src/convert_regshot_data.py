@@ -52,7 +52,7 @@ def parse_regshot_file(data_config, malware_config, malware):
 def convert(data_config, malware_config, malware):
     # Generating paths
     malware_dir = f"{data_config['Path']}/{malware}"
-    regshot_result_path = str(f"{malware_dir}/regshot_{malware_config['Regshot']}",)
+    regshot_result_path = str(f"{malware_dir}/{malware_config['Regshot']}",)
     file_paths = [f"{malware_dir}/{file}" for file in os.listdir(malware_dir)]
 
     overall_lines = ["Type,Operation,Path\n"]
