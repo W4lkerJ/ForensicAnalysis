@@ -1,11 +1,8 @@
+import json
 
-def convert():
-    malware = "cerber"
-    malware_dir = f"/home/jevenari/PycharmProjects/ForensicalAnalysis/data/{malware}"
-    regshot_result_path = str(f"{malware_dir}/regshot_results.csv",)
-    header = "Type,Operation,Path"
 
-    file_paths = [
+def get_paths(malware_dir):
+    return [
         # Registry
         f"{malware_dir}/key_added",
         f"{malware_dir}/key_deleted",
@@ -24,19 +21,32 @@ def convert():
         f"{malware_dir}/folder_deleted",
     ]
 
-    overall_lines = []
+
+def convert():
+    # Config
+    malware = "Cerber"
+    config = json.load(open("/home/jevenari/PycharmProjects/ForensicalAnalysis/config/config.json"))
+    data_config = config['Data']
+    malware_config = config[malware]
+
+    # Generating paths
+    malware_dir = f"{data_config['Path']}/{malware}"
+    regshot_result_path = str(f"{malware_dir}/regshot_{malware_config['Regshot']}",)
+    file_paths = get_paths(malware_dir)
+
+    overall_lines = ["Type,Operation,Path\n"]
     for file_path in file_paths:
         file_name = file_path.split("/")[-1]
 
         keys = file_name.split("_")
 
-        regshot_type = keys[0]
-        operation = keys[1]
+        regshot_type = keys[0].capitalize()
+        operation = keys[1].capitalize()
 
         with open(file_path, "r") as file:
             lines = file.readlines()
 
-        typed_lines = [f"{regshot_type},{operation},{line}" for line in lines]
+        typed_lines = [f"{regshot_type},{operation},{line}\n" for line in lines]
 
         overall_lines = overall_lines + typed_lines
 
