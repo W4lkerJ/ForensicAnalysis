@@ -55,7 +55,7 @@ def convert(data_config, malware_config, malware):
     regshot_result_path = str(f"{malware_dir}/{malware_config['Regshot']}",)
     file_paths = [f"{malware_dir}/{file}" for file in os.listdir(malware_dir)]
 
-    overall_lines = ["Type,Operation,Path\n"]
+    overall_lines = ["Type;Operation;Path\n"]
     for file_path in file_paths:
         file_name = file_path.split("/")[-1]
 
@@ -67,7 +67,7 @@ def convert(data_config, malware_config, malware):
         with open(file_path, "r") as file:
             lines = file.readlines()
 
-        typed_lines = [f"{regshot_type},{operation},{line}" for line in lines]
+        typed_lines = [f"{regshot_type};{operation};{line}" for line in lines]
 
         overall_lines = overall_lines + typed_lines
 
