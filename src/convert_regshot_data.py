@@ -2,14 +2,14 @@ import os
 import json
 
 
-def parse_regshot_file(malware_config, malware):
+def parse_regshot_file(data_config, malware_config, malware):
     """
         Caution: Values modified does no split the values correctly into separate lines, since they can
         extend over multiple lines instead of just one.
     """
 
     regshot_file_path = f"{malware_config['Dynamic']}/regshot_{malware.lower()}.txt"
-    result_dir = f"/home/jevenari/PycharmProjects/ForensicalAnalysis/data/{malware}"
+    result_dir = f"{data_config['Path']}/{malware}"
 
     with open(regshot_file_path, "r") as regshot_file:
         regshot_content = regshot_file.read()
@@ -49,7 +49,7 @@ def parse_regshot_file(malware_config, malware):
                 file.writelines(data_lines_with_break)
 
 
-def convert(data_config, malware, malware_config):
+def convert(data_config, malware_config, malware):
     # Generating paths
     malware_dir = f"{data_config['Path']}/{malware}"
     regshot_result_path = str(f"{malware_dir}/regshot_{malware_config['Regshot']}",)
@@ -83,10 +83,10 @@ def main():
     malware_config = config[malware]
 
     # Parse the regshot into several machine-readable files
-    parse_regshot_file(malware_config, malware)
+    parse_regshot_file(data_config, malware_config, malware)
 
     # Convert the different regshot files into a single one
-    convert(data_config, malware, malware_config)
+    convert(data_config, malware_config, malware)
 
 
 if __name__ == '__main__':
