@@ -14,19 +14,19 @@ import pandas as pd
 
 # ## Paths
 
-# In[2]:
+# In[80]:
 
 
-current_malware = "Cerber"
+current_malware = "GandCrabV4"
 
 
-# In[3]:
+# In[81]:
 
 
 project_root = "/home/jevenari/PycharmProjects/ForensicalAnalysis"
 
 
-# In[4]:
+# In[82]:
 
 
 config_path = "/home/jevenari/PycharmProjects/ForensicalAnalysis/config/config.json"
@@ -34,13 +34,13 @@ config = json.load(open(config_path, "r"))
 config = config[current_malware]
 
 
-# In[5]:
+# In[83]:
 
 
 procmon_path = f"{config['Dynamic']}/{config['ProcessMonitor']}"
 
 
-# In[6]:
+# In[84]:
 
 
 regshot_path = f"{project_root}/data/{current_malware}/{config['Regshot']}"
@@ -48,7 +48,7 @@ regshot_path = f"{project_root}/data/{current_malware}/{config['Regshot']}"
 
 # ## Pandas
 
-# In[7]:
+# In[85]:
 
 
 pd.set_option('display.min_rows', 1000)
@@ -59,13 +59,13 @@ pd.set_option("display.max_rows", 10000)
 
 # ## Load data
 
-# In[8]:
+# In[86]:
 
 
 df_procmon = pd.read_csv(procmon_path)
 
 
-# In[9]:
+# In[87]:
 
 
 df_procmon
@@ -73,7 +73,7 @@ df_procmon
 
 # ## Get unique operations
 
-# In[13]:
+# In[88]:
 
 
 sorted(list(df_procmon["Operation"].unique()))
@@ -81,37 +81,37 @@ sorted(list(df_procmon["Operation"].unique()))
 
 # ## Get Process Create/Process Exit/Process Start events)
 
-# In[14]:
+# In[89]:
 
 
 df_process_create = df_procmon.query("Operation == 'Process Create'")
 
 
-# In[15]:
+# In[90]:
 
 
 df_process_create
 
 
-# In[16]:
+# In[91]:
 
 
 df_process_start = df_procmon.query("Operation == 'Process Start'")
 
 
-# In[17]:
+# In[92]:
 
 
 df_process_start
 
 
-# In[18]:
+# In[93]:
 
 
 df_process_exit = df_procmon.query("Operation == 'Process Exit'")
 
 
-# In[19]:
+# In[94]:
 
 
 df_process_exit
@@ -119,25 +119,31 @@ df_process_exit
 
 # ## Get Thread Create/Thread Exit
 
-# In[20]:
+# In[95]:
 
 
 df_thread_create = df_procmon.query("Operation == 'Thread Create'")
 
 
-# In[21]:
+# In[96]:
+
+
+df_thread_create.count()
+
+
+# In[97]:
 
 
 df_thread_create
 
 
-# In[22]:
+# In[98]:
 
 
 df_thread_exit = df_procmon.query("Operation == 'Thread Exit'")
 
 
-# In[23]:
+# In[99]:
 
 
 df_thread_exit
@@ -145,31 +151,31 @@ df_thread_exit
 
 # ## Get RegCreateKey/RegSetValue data
 
-# In[24]:
+# In[100]:
 
 
 df_reg_value_set = df_procmon.query("Operation == 'RegCreateKey'")
 
 
-# In[25]:
+# In[101]:
 
 
 df_reg_value_set
 
 
-# In[26]:
+# In[102]:
 
 
 df_reg_value_set = df_procmon.query("Operation == 'RegSetValue'")
 
 
-# In[27]:
+# In[103]:
 
 
 df_reg_value_set.count()
 
 
-# In[28]:
+# In[104]:
 
 
 df_reg_value_set
@@ -177,31 +183,37 @@ df_reg_value_set
 
 # ## Get loaded DLLs
 
-# In[29]:
+# In[105]:
 
 
 df_loaded_dlls = df_procmon.query("Operation == 'Load Image'")
 
 
-# In[30]:
+# In[106]:
 
 
 unique_dlls = pd.unique(df_loaded_dlls["Path"])
 
 
-# In[31]:
+# In[107]:
 
 
 df_unique_dlls = pd.DataFrame(unique_dlls, columns=["Path"])
 
 
-# In[32]:
+# In[108]:
 
 
 df_unique_dlls["DLL"] = df_unique_dlls["Path"].apply(lambda path: path.split("\\")[-1])
 
 
-# In[33]:
+# In[109]:
+
+
+df_unique_dlls.count()
+
+
+# In[110]:
 
 
 df_unique_dlls
@@ -211,7 +223,7 @@ df_unique_dlls
 
 # ## Load data
 
-# In[42]:
+# In[119]:
 
 
 df_regshot_data = pd.read_csv(regshot_path, delimiter=";")
@@ -219,13 +231,13 @@ df_regshot_data = pd.read_csv(regshot_path, delimiter=";")
 
 # ## Show unique types & operations
 
-# In[50]:
+# In[120]:
 
 
 sorted(df_regshot_data["Type"].unique())
 
 
-# In[51]:
+# In[121]:
 
 
 sorted(df_regshot_data["Operation"].unique())
@@ -233,235 +245,315 @@ sorted(df_regshot_data["Operation"].unique())
 
 # ## Files Created
 
-# In[46]:
+# In[122]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'File' & Operation == 'Deleted'")
+df_files_created = df_regshot_data.query("Type == 'File' & Operation == 'Added'")
 
 
-# In[47]:
+# In[123]:
 
 
-df_operation_query
+df_files_created
 
 
-# In[49]:
+# In[124]:
 
 
-df_operation_query.count()
+df_files_created.count()
 
 
 # ## Files modified
 
-# In[52]:
+# In[125]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'File' & Operation == 'Modified'")
+df_files_modiefied = df_regshot_data.query("Type == 'File' & Operation == 'Modified'")
 
 
-# In[53]:
+# In[126]:
 
 
-df_operation_query
+df_files_modiefied
 
 
-# In[54]:
+# In[127]:
 
 
-df_operation_query.count()
+df_files_modiefied.count()
 
 
 # ## Files Deleted
 
-# In[79]:
+# In[128]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'File' & Operation == 'Deleted'")
+df_files_deleted = df_regshot_data.query("Type == 'File' & Operation == 'Deleted'")
 
 
-# In[80]:
+# In[129]:
 
 
-df_operation_query
+df_files_deleted
 
 
-# In[81]:
+# In[130]:
 
 
-df_operation_query.count()
+df_files_deleted.count()
 
 
 # ## Folders Created
 
-# In[58]:
+# In[131]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Folder' & Operation == 'Deleted'")
+df_folders_created = df_regshot_data.query("Type == 'Folder' & Operation == 'Added'")
 
 
-# In[59]:
+# In[132]:
 
 
-df_operation_query
+df_folders_created
 
 
-# In[60]:
+# In[133]:
 
 
-df_operation_query.count()
+df_folders_created.count()
 
 
 # ## Folders modified
 
-# In[61]:
+# In[134]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Folder' & Operation == 'Modified'")
+df_folders_modified = df_regshot_data.query("Type == 'Folder' & Operation == 'Modified'")
 
 
-# In[62]:
+# In[135]:
 
 
-df_operation_query
+df_folders_modified
 
 
-# In[64]:
+# In[136]:
 
 
-df_operation_query.count()
+df_folders_modified.count()
 
 
 # ## Folders Deleted
 
-# In[76]:
+# In[137]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Folder' & Operation == 'Deleted'")
+df_folders_deleted = df_regshot_data.query("Type == 'Folder' & Operation == 'Deleted'")
 
 
-# In[77]:
+# In[138]:
 
 
-df_operation_query
+df_folders_deleted
 
 
-# In[78]:
+# In[139]:
 
 
-df_operation_query.count()
+df_folders_deleted.count()
 
 
 # ## Registry Keys Created
 
-# In[67]:
+# In[140]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Key' & Operation == 'Deleted'")
+df_reg_keys_created = df_regshot_data.query("Type == 'Key' & Operation == 'Added'")
 
 
-# In[68]:
+# In[141]:
 
 
-df_operation_query
+df_reg_keys_created
 
 
-# In[69]:
+# In[142]:
 
 
-df_operation_query.count()
+df_reg_keys_created.count()
 
 
 # ## Registry Keys modified
 
-# In[70]:
+# In[143]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Key' & Operation == 'Modified'")
+df_reg_keys_modfied = df_regshot_data.query("Type == 'Key' & Operation == 'Modified'")
 
 
-# In[71]:
+# In[144]:
 
 
-df_operation_query
+df_reg_keys_modfied
 
 
-# In[72]:
+# In[145]:
 
 
-df_operation_query.count()
+df_reg_keys_modfied.count()
 
 
 # ## Registry Keys Deleted
 
-# In[73]:
+# In[146]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Value' & Operation == 'Deleted'")
+df_reg_keys_deleted = df_regshot_data.query("Type == 'Value' & Operation == 'Deleted'")
 
 
-# In[75]:
+# In[147]:
 
 
-df_operation_query
+df_reg_keys_deleted
 
 
-# In[74]:
+# In[148]:
 
 
-df_operation_query.count()
+df_reg_keys_deleted.count()
 
 
 # ## Registry Values Created
 # <h4 style="color: red">CAUTION: This part could not be parsed correctly, since the actual values were distributed over multiple lines resulting in a random pattern, that was impossible to parse.</h4>
 
-# In[46]:
+# In[149]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Value' & Operation == 'Deleted'")
+df_reg_values_created = df_regshot_data.query("Type == 'Value' & Operation == 'Added'")
 
 
-# In[47]:
+# In[150]:
 
 
-df_operation_query
+df_reg_values_created
 
 
-# In[49]:
+# In[151]:
 
 
-df_operation_query.count()
+df_reg_values_created.count()
 
 
 # ## Registry Values modified
 
-# In[52]:
+# In[152]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Value' & Operation == 'Modified'")
+df_reg_values_modified = df_regshot_data.query("Type == 'Value' & Operation == 'Modified'")
 
 
-# In[53]:
+# In[153]:
 
 
-df_operation_query
+df_reg_values_modified
 
 
-# In[54]:
+# In[154]:
 
 
-df_operation_query.count()
+df_reg_values_modified.count()
 
 
 # ## Registry Values Deleted
 
-# In[55]:
+# In[155]:
 
 
-df_operation_query = df_regshot_data.query("Type == 'Value' & Operation == 'Deleted'")
+df_reg_values_deleted = df_regshot_data.query("Type == 'Value' & Operation == 'Deleted'")
 
 
-# In[56]:
+# In[156]:
 
 
-df_operation_query.count()
+df_reg_values_deleted
+
+
+# In[157]:
+
+
+df_reg_values_deleted.count()
+
+
+# ## Generate Read Flow
+
+# In[158]:
+
+
+read_data = {
+    "Type": "File",
+    "Operation": "Read",
+    "Path": "C:\\Users\\Cuckoo\\Documents\\Images\\a-panther-is-seen-after-being-sedated-in-league-of-the-protection-of-animals-lpa-shelter-in-lille.jpg",
+}
+read_data_series = pd.Series(read_data)
+
+
+# In[64]:
+
+
+read_data_series
+
+
+# In[65]:
+
+
+df_files_deleted.iloc[16]
+
+
+# In[66]:
+
+
+df_files_created.iloc[18]
+
+
+# In[75]:
+
+
+data = [
+    read_data_series,
+    df_files_created.iloc[18],
+    df_files_deleted.iloc[16],
+]
+
+
+# In[76]:
+
+
+df_data = pd.DataFrame(data)
+
+
+# In[77]:
+
+
+df_data
+
+
+# In[78]:
+
+
+pd.options.display.width = 0
+
+
+# In[79]:
+
+
+from pandas import option_context
+
+with option_context('display.max_colwidth', 400):
+    display(df_data)
+
+
+# In[ ]:
+
+
+
 
