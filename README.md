@@ -4,7 +4,7 @@ This repository contains config, code and results for the IT-forensical analysis
 ## Config
 Contains a config file storing paths, that are needed by some of the code files.
 
-## Code
+## Src
 This folder contains Python code for converting Jupyter Notebooks into .py files (*convert_nbs.py*), a Python script converting the output of the analysis program *Regshot* to the format of *ProcMon* (*convert_regshot_data.py*), a Python script for getting the average length of the output of the analysis program *strings* using all files in a given directory (*strings_output_length_comparison.py*). It furthermore contains the Jupyter Notebook *ResultAnalysis.ipynb* and its converted version *ResultAnalysis.py* that visualizes the results got from *ProcMon* and *Regshot* while doing the dynamic analysis of ransomware.
 
 ## Results
