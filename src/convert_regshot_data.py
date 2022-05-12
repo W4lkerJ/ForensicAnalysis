@@ -77,7 +77,7 @@ def convert(data_config, malware_config, malware):
 
 def main():
     # Config
-    malware = "Darkside"
+    malware = "Sodinokibi"
     config = json.load(open("/home/jevenari/PycharmProjects/ForensicalAnalysis/config/config.json"))
     data_config = config['Data']
     malware_config = config[malware]

